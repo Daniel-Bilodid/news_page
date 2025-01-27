@@ -1,4 +1,0 @@
-{
-  "/news/[slug]/page": "app/news/[slug]/page.js",
-  "/archive/@archive/page": "app/archive/@archive/page.js"
-}

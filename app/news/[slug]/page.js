@@ -1,5 +1,6 @@
-import { DUMMY_NEWS } from "@/dummy-text";
-import { notFound } from "next/navigation";
+import { notFound } from 'next/navigation';
+
+import { DUMMY_NEWS } from '@/dummy-news';
 
 export default function NewsDetailPage({ params }) {
   const newsSlug = params.slug;
