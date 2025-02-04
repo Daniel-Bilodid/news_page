@@ -1,3 +1,8 @@
 export default function NewsDetailLayout({ children, modal }) {
-  return <>{children}</>;
+  return (
+    <>
+      {modal}
+      {children}
+    </>
+  );
 }

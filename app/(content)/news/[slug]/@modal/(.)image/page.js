@@ -1,17 +1,13 @@
 "use client";
 
-import { notFound } from "next/navigation";
+import { notFound, useRouter } from 'next/navigation';
 
-import { DUMMY_NEWS } from "@/dummy-news";
-import { useRouter } from "next/navigation";
+import { DUMMY_NEWS } from '@/dummy-news';
 
 export default function InterceptedImagePage({ params }) {
-  const router = useRouter();
-
-
+  const router = useRouter()
 
   const newsItemSlug = params.slug;
-
   const newsItem = DUMMY_NEWS.find(
     (newsItem) => newsItem.slug === newsItemSlug
   );
@@ -19,6 +15,7 @@ export default function InterceptedImagePage({ params }) {
   if (!newsItem) {
     notFound();
   }
+
   return (
     <>
       <div className="modal-backdrop" onClick={router.back} />
